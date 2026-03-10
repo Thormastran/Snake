@@ -21,7 +21,7 @@ const snakeColor = "lightgreen";
 const snakeBorder = "black";
 const foodColor = "red";
 
-let running = false;
+let running = true;
 let paused = false;
 let directionChanged = false;
 
@@ -50,3 +50,19 @@ function getInitialSnake() {
 
 // Initialize snake immediately
 snake = getInitialSnake();
+
+// Function to resize canvas for responsive design
+function resizeCanvas() {
+  const container = document.querySelector('.board-wrap');
+  const size = Math.min(container.clientWidth, container.clientHeight);
+  // Keep internal canvas size fixed for consistent game logic
+  gameBoard.width = 500;
+  gameBoard.height = 500;
+  // Scale the display size
+  gameBoard.style.width = size + 'px';
+  gameBoard.style.height = size + 'px';
+}
+
+// Resize canvas on window resize
+window.addEventListener('resize', resizeCanvas);
+window.addEventListener('DOMContentLoaded', resizeCanvas);

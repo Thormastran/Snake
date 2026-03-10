@@ -1,0 +1,14 @@
+{
+  "name": "snake-game",
+  "version": "1.0.0",
+  "description": "A classic Snake game built with vanilla JavaScript",
+  "main": "snake/index.html",
+  "scripts": {
+    "start": "npx serve snake",
+    "dev": "npx serve snake",
+    "deploy": "npx vercel"
+  },
+  "keywords": ["snake", "game", "javascript", "html5", "canvas"],
+  "author": "trancongtam",
+  "license": "MIT"
+}

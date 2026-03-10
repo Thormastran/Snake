@@ -100,6 +100,16 @@ pauseBtn.addEventListener("click", togglePause);
 resetBtn.addEventListener("click", resetGame);
 
 // Initialize the game when page loads
+document.addEventListener("DOMContentLoaded", () => {
+  updateStats();
+  createFood();
+  clearBoard();
+  drawFood();
+  drawSnake();
+  nextTick();
+});
+
+// Initialize the game when page loads
 window.addEventListener("load", () => {
   resetGame();
 });
