@@ -1,17 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <div id="gameContainer">
-      <canvas id="gameBoard" width="500" height="500"></canvas>
-      <div id="scoreText">0</div>
-      <button id="resetBtn">Start</button>
+  <div class="app">
+    <h1>Snake Game</h1>
+
+    <div class="stats">
+      <div>Score: <span id="scoreText">0</span></div>
+      <div>High Score: <span id="highScoreText">0</span></div>
+      <div>Level: <span id="levelText">1</span></div>
     </div>
-    <script src="index.js"></script>
+
+    <div class="actions">
+      <button id="pauseBtn">Pause</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+
+    <div class="board-wrap">
+      <canvas id="gameBoard" width="500" height="500"></canvas>
+    </div>
+
+    <div class="mobile-controls">
+      <button id="upBtn">↑</button>
+      <div class="mobile-row">
+        <button id="leftBtn">←</button>
+        <button id="downBtn">↓</button>
+        <button id="rightBtn">→</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/state.js"></script>
+  <script src="js/food.js"></script>
+  <script src="js/snake.js"></script>
+  <script src="js/controls.js"></script>
+  <script src="js/game.js"></script>
 </body>
 </html>
